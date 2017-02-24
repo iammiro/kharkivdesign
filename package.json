@@ -1,0 +1,31 @@
+{
+  "name": "kharkivdesign",
+  "version": "1.0.0",
+  "description": "Project for Kharkiv State Academy of Design and Arts.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iammiro/kharkivdesign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.2.1",
+    "gulp-filter": "^5.0.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-stylus": "^2.6.0",
+    "postcss-nested": "^1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/iammiro/kharkivdesign/issues"
+  },
+  "homepage": "https://github.com/iammiro/kharkivdesign#readme"
+}
