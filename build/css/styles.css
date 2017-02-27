@@ -1,0 +1,41 @@
+body {
+	background: #000;
+	color: #000;
+	line-height: 1;
+}
+
+h1, h2 {
+	color: #fff;
+}
+
+.wrap {
+	width: 1366px;
+	margin: 0 auto;
+	
+}
+
+.main {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.button {
+	display: inline-block;
+	border: 2px solid black;
+	border-radius: 30px;
+}
+
+.button__text {
+	font-size: 12pt;
+	padding: 10px 35px;
+}
+
+.button_up-arrow-black .button__text::before {
+	content: "5";
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	padding: 0 
+}

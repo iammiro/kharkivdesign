@@ -1,0 +1,7 @@
+//	
+	text - текст кнопки
+	blockClasses - название класса которое можно присвоить чтобы задать кнопке свои стили или иконку
+
+mixin b-button(textBtn, classesBtn)
+	+b.button(class=classesBtn)
+		+e.text= textBtn
