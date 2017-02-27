@@ -3,6 +3,7 @@ var browserSync = require('browser-sync').create();;
 var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
 var coffee = require('gulp-coffee');
+var imagemin = require('gulp-imagemin');
 
 
 // Static server
@@ -19,6 +20,12 @@ gulp.task('serve', ['stylus', 'pug', 'coffee'], function() {
     gulp.watch('build/*.*').on('change', browserSync.reload);
 });
 
+//Сжатие и перемещение изображений
+gulp.task('compress-images', function () {
+    gulp.src('src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/img'))
+});
 
 // Компиляция файлов Stylus
 gulp.task('stylus', function(){
