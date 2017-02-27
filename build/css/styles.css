@@ -4,6 +4,10 @@ body {
 	line-height: 1;
 }
 
+h1, h2 {
+	color: #fff;
+}
+
 .wrap {
 	width: 1366px;
 	margin: 0 auto;
@@ -17,34 +21,6 @@ body {
 	justify-content: space-between;
 }
 
-.advantages {
-	display: inline-block;
-	box-sizing: border-box;
-	height: 490px;
-	padding: 35px 50px;
-	background-size: cover;
-}
-/* Приимущества */
-
-.advantages_col-1 {
-	width: 33.333%;
-}
-
-.advantages_col-2 {
-	width: 66.666%;
-}
-
-.advantages__text_name {
-	font-size: 12pt;
-	color: #6a6b6f;
-	margin-bottom: 20px;
-}
-
-.advantages__text_description {
-	font-size: 21pt;
-}
-
-/* Кнопка */
 .button {
 	display: inline-block;
 	border: 2px solid black;
@@ -54,59 +30,4 @@ body {
 .button__text {
 	font-size: 12pt;
 	padding: 10px 30px;
-}
-
-.advantages_1 {
-	background: url(../img/advantages_1.png) 100% 100% no-repeat;
-}
-
-.advantages_2 {
-	background: #fff;
-}
-
-.advantages_3 {
-	color: #fff;
-	background: #fd4600;
-}
-
-.advantages_4 {
-	color: #fff;
-	background: #fff;
-}
-
-.advantages_5 {
-	color: #fff;
-	background: url(../img/advantages_5.png) 100% 100% no-repeat;
-}
-
-.advantages_6 {
-	background: #fff;
-}
-
-.advantages_7 {
-	color: #fff;
-	background: url(../img/advantages_7.png) 100% 100% no-repeat;
-}
-
-.advantages_8 {
-	background: url(../img/advantages_8.png) 100% 100% no-repeat;
-}
-
-.advantages_9 {
-	color: #fff;
-	background: url(../img/advantages_9.png) 100% 100% no-repeat;
-}
-
-
-.advantages_10 {
-	color: #fff;
-	background: url(../img/advantages_10.png) 100% 100% no-repeat;
-}
-
-.advantages_enroll {
-	background: #fff;
-}
-
-h1, h2 {
-	color: #fff;
 }

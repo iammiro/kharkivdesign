@@ -8,13 +8,15 @@ html
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, user-scalable=yes")
 		title ИНСТИТУТ МОДЫ И ДИЗАЙНА
+		link(rel="stylesheet" href="/vendor/reset.css")
+		link(rel="stylesheet" href="/css/styles.css?v=" + ver)	
 		block style
 	body
 		.wrap
-			.header
+			header.header
 				include header
-			.main
+			main.main
 				include main
-			.footer
+			footer.footer
 				include footer
-				block script
+			script(type="text/javascript" src="/vendor/jquery.min.js")
