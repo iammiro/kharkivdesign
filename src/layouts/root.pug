@@ -1,1 +1,20 @@
-include  ../blocks/all
+include  ../block/advantages/advantages
+include  ../block/button/button
+include ../../node_modules/bemto.pug/bemto
+
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, user-scalable=yes")
+		title ИНСТИТУТ МОДЫ И ДИЗАЙНА
+		block style
+	body
+		.wrap
+			.header
+				include header
+			.main
+				include main
+			.footer
+				include footer
+				block script

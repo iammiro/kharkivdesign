@@ -1,55 +1,47 @@
-const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-var data = require('gulp-data');
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();;
+var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
-const autoprefixer = require('autoprefixer');
-const nested = require('postcss-nested');
-const pug = require('gulp-pug');
-var concat = require('gulp-concat');
-var Filter = require('gulp-filter');
-const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
+var coffee = require('gulp-coffee');
 
-const processors = [
-    autoprefixer({
-        browsers: ['last 6 versions']
-    }),
-    nested
-];
 
-gulp.task('serve', ['pug'], function () {
+// Static server
+gulp.task('serve', ['stylus', 'pug', 'coffee'], function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./build/"
         }
     });
-    gulp.watch('*.jade', ['pug']);
-    gulp.watch('*.html').on('change', reload);
+
+    gulp.watch('src/styl/*.*', ['stylus']);
+    gulp.watch('src/**/*.*', ['pug']);
+    gulp.watch('src/coffee/*.*', ['coffee']);
+    gulp.watch('build/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('styl', function () {
-    const f = Filter(['src/blocks/**/*.styl'], {restore: true});
-    return gulp.src('src/blocks/**/*.styl')
-        .pipe(f)
-        .pipe(stylus())
-        // .pipe(f.restore())
-        .pipe(concat('main.css'))
-        .pipe(gulp.dest('build/css'));
+
+// Компиляция файлов Stylus
+gulp.task('stylus', function(){
+  return gulp.src('src/styl/*.*')
+  .pipe(stylus())
+  .pipe(gulp.dest('build/css/'))
+  .pipe(browserSync.stream());
 });
 
-gulp.task('pug', function buildHTML() {
-    return gulp
-        .src('src/index.pug')
-        .pipe(pug({}))
-        .pipe(gulp.dest('build/html/'));
+// Компиляция файлов PUG
+gulp.task('pug', function(){
+  return gulp.src('src/index.pug')
+  .pipe(pug())
+  .pipe(gulp.dest('build/'))
+  .pipe(browserSync.stream());
 });
 
-gulp.task('pug:watch', function () {
-    gulp.watch('src/pug/*', ['html'])
+// Компиляция файлов Coffee
+gulp.task('coffee', function(){
+  return gulp.src('src/coffee/*.*')
+  .pipe(coffee())
+  .pipe(gulp.dest('build/js/'))
+  .pipe(browserSync.stream());
 });
 
-gulp.task('scss:watch', function () {
-    gulp.watch('src/scss/*', ['scss']);
-});
-
-gulp.task('default', ['styl', 'pug']);
+gulp.task('default', ['serve']);
