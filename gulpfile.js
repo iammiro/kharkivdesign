@@ -22,7 +22,7 @@ gulp.task('serve', ['stylus', 'pug', 'coffee'], function() {
 
 // Компиляция файлов Stylus
 gulp.task('stylus', function(){
-  return gulp.src('src/styl/*.*')
+  return gulp.src('src/assets/*.*')
   .pipe(stylus())
   .pipe(gulp.dest('build/css/'))
   .pipe(browserSync.stream());

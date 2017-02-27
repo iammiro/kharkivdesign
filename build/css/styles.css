@@ -29,5 +29,13 @@ h1, h2 {
 
 .button__text {
 	font-size: 12pt;
-	padding: 10px 30px;
+	padding: 10px 35px;
+}
+
+.button_up-arrow-black .button__text::before {
+	content: "5";
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	padding: 0 
 }
