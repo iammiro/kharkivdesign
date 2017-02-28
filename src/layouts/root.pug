@@ -12,11 +12,9 @@ html
 		link(rel="stylesheet" href="/css/styles.css")
 		block style
 	body
+		+b-header
 		.wrap
-			header.header
-				include header
 			main.main
-				include main
-			footer.footer
-				include footer
+				block main
+			+b-footer
 			script(type="text/javascript" src="/vendor/jquery.min.js")
