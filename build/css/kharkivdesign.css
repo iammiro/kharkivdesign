@@ -13,6 +13,12 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.header {
+  height: 710px;
+}
+.footer {
+  height: 373px;
+}
 .advantages {
   display: inline-block;
   box-sizing: border-box;
