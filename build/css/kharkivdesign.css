@@ -1,7 +1,20 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("../font/open-sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: OpenSansSemibold;
+  src: url("../font/open-sans/OpenSans-Semibold.ttf");
+}
+@font-face {
+  font-family: OpenSansSemibold;
+  src: url("../font/open-sans/OpenSans-Semibold.ttf");
+}
 body {
   background: #000;
   color: #000;
   line-height: 1;
+  font-family: OpenSans;
 }
 .wrap {
   width: 1366px;
@@ -13,7 +26,14 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.header {
+  height: 710px;
+}
+.footer {
+  height: 373px;
+}
 .advantages {
+  font-family: OpenSansSemibold;
   display: inline-block;
   box-sizing: border-box;
   height: 490px;
@@ -27,12 +47,12 @@ body {
   width: 66.666%;
 }
 .advantages__text_name {
-  font-size: 12pt;
+  font-size: 10px;
   color: #6a6b6f;
   margin-bottom: 20px;
 }
 .advantages__text_description {
-  font-size: 21pt;
+  font-size: 26px;
 }
 .advantages_1 {
   background: url("../img/advantages_1.png") 100% 100% no-repeat;
