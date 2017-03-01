@@ -1,5 +1,60 @@
 extends layouts/root
 
-block style
-	- ver = 1
-	link(rel="stylesheet" href="/css/advantages.css?v=" + ver)
+block main
+	-textName1 = 'Новости'
+	-textDescription1 = 'Новая специальность — дизайнер <br> мебели'
+	-textBtn1 = 'Читать'
+	-classesBlock1 = '_col-2 _1'
+	-classesBtn1 = '_up-arrow-black'
+	+b-advantages(textName1, textDescription1, textBtn1, classesBlock1, classesBtn1)
+
+
+	-textDescription2 = '21 октября <br> День открытых <br> дверей'
+	-textBtn2 = 'Записаться'
+	-classesBlock2 = '_col-1 _2'
+	+b-advantages(textName2, textDescription2, textBtn2, classesBlock2, classesBtn2)
+
+
+	-textDescription3 = 'Наш институт готовит <br> специалистов по самым востребованным <br> интересную работу <br>'
+	-textBtn3 = 'Специальности'
+	-classesBlock3 = '_col-1 _3'
+	-classesBtn3 = '_up-arrow-white'
+	+b-advantages(textName3, textDescription3, textBtn3, classesBlock3, classesBtn3)
+
+	-textDescription4 = 'Работы студентов'
+	-classesBlock4 = '_col-2 _4'
+	+b-advantages(textName4, textDescription4, textBtn4, classesBlock4, classesBtn4)
+
+	-textName5 = 'Новости'
+	-textDescription5 = 'Нора Иньеста в Киеве'
+	-textBtn5 = 'Читать'
+	-classesBlock5 = '_col-1 _5'
+	-classesBtn5 = '_up-arrow-white'
+	+b-advantages(textName5, textDescription5, textBtn5, classesBlock5, classesBtn5)
+
+	-textName6 = 'Астреинова Наталья Григорьевна <br> Директор Института'
+	-textDescription6 = 'В отличие от других учебных заведений, основной упор у нас делается на специальные предметы и практику, практику, практику...'
+	-classesBlock6 = '_col-1 _6'
+	+b-advantages(textName6, textDescription6, textBtn6, classesBlock6, classesBtn6)
+
+	-textName7 = 'Стажировка'
+	-textDescription7 = 'Стажировка в Милане и Риме'
+	-classesBlock7 = '_col-1 _7'
+	+b-advantages(textName7, textDescription7, textBtn7, classesBlock7, classesBtn7)
+
+	-textName8 = 'Об институте'
+	-textDescription8 = 'Награды'
+	-classesBlock8 = '_col-1 _8'
+	+b-advantages(textName8, textDescription8, textBtn8, classesBlock8, classesBtn8)
+
+	-textName9 = 'Об институте'
+	-textDescription9 = 'Лучшие студенты'
+	-classesBlock9 = '_col-1 _9'
+	+b-advantages(textName9, textDescription9, textBtn9, classesBlock9, classesBtn9)
+
+	-textName10 = 'Об институте'
+	-textDescription10 = 'Наши учителя'
+	-textBtn10 = 'Все учителя'
+	-classesBlock10 = '_col-1 _10'
+	-classesBtn10 = '_up-arrow-black'
+	+b-advantages(textName10, textDescription10, textBtn10, classesBlock10, classesBtn510)

@@ -21,10 +21,10 @@ body {
   background-size: cover;
 }
 .advantages_col-1 {
-  width: 33.33%;
+  width: 33.333%;
 }
-.advantages_col-1 {
-  width: 66.66%;
+.advantages_col-2 {
+  width: 66.666%;
 }
 .advantages__text_name {
   font-size: 12pt;

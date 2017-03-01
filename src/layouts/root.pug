@@ -1,5 +1,4 @@
-include  ../block/advantages/advantages
-include  ../block/button/button
+include  ../block/index
 include ../../node_modules/bemto.pug/bemto
 
 doctype html
@@ -9,14 +8,11 @@ html
 		meta(name="viewport", content="width=device-width, user-scalable=yes")
 		title ИНСТИТУТ МОДЫ И ДИЗАЙНА
 		link(rel="stylesheet" href="/vendor/reset.css")
-		link(rel="stylesheet" href="/css/styles.css")
-		block style
+		link(rel="stylesheet" href="/css/kharkivdesign.css")
 	body
+		+b-header
 		.wrap
-			header.header
-				include header
 			main.main
-				include main
-			footer.footer
-				include footer
+				block main
+			+b-footer
 			script(type="text/javascript" src="/vendor/jquery.min.js")
