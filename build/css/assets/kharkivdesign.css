@@ -37,7 +37,7 @@ body {
   display: inline-block;
   box-sizing: border-box;
   height: 490px;
-  padding: 0 50px;
+  padding: 35px 50px;
   background-size: cover;
 }
 .advantages_col-1 {
@@ -49,37 +49,9 @@ body {
 .advantages_1 {
   background: url("../img/advantages_1.png") 100% 100% no-repeat;
 }
-.advantages_1 .advantages__text_name {
-  margin-top: 35px;
-}
-.advantages_1 .advantages__text_description {
-  margin-bottom: 35px;
-}
-.advantages_1 .button {
-  border-color: #000;
-  color: #000;
-}
-.advantages_1 .button__icon .my-icon::before {
-  content: "@";
-  padding-left: 2px;
-}
 .advantages_2 {
   background: #fff;
   text-align: center;
-}
-.advantages_2 .advantages__icon {
-  margin-top: 60px;
-  margin-bottom: 50px;
-}
-.advantages_2 .advantages__icon .my-icon::before {
-  color: #fc4600;
-  content: "Calendar star";
-}
-.advantages_2 .advantages__text_description {
-  margin-bottom: 70px;
-}
-.advantages_2 .button {
-  margin: 0 auto;
 }
 .advantages_2:hover {
   background: url("../img/advantages_2_hover.png") 100% 100% no-repeat;
@@ -89,19 +61,6 @@ body {
   color: #fff;
   background: #fd4600;
 }
-.advantages_3 .advantages__text_description {
-  margin-top: 75px;
-  margin-bottom: 70px;
-  line-height: 1.2;
-}
-.advantages_3 .button {
-  border-color: #fff;
-  color: #fff;
-}
-.advantages_3 .button__icon .my-icon::before {
-  content: "@";
-  padding-left: 2px;
-}
 .advantages_4 {
   color: #fff;
   background: #fff;
@@ -110,61 +69,24 @@ body {
   color: #fff;
   background: url("../img/advantages_5.png") 100% 100% no-repeat;
 }
-.advantages_5 .advantages__text_name {
-  margin-top: 295px;
-}
-.advantages_5 .advantages__text_description {
-  margin-bottom: 35px;
-}
-.advantages_5 .button {
-  border-color: #fff;
-  color: #fff;
-}
-.advantages_5 .button__icon .my-icon::before {
-  content: "@";
-  padding-left: 2px;
-}
 .advantages_6 {
   background: #fff;
   text-align: center;
-}
-.advantages_6 .advantages__icon {
-  margin-top: 65px;
-  margin-bottom: 40px;
-}
-.advantages_6 .advantages__icon .my-icon::before {
-  color: #fc4600;
-  content: "Quotes";
 }
 .advantages_7 {
   color: #fff;
   background: url("../img/advantages_7.png") 100% 100% no-repeat;
 }
-.advantages_7 .advantages__text_name {
-  margin-top: 40px;
-}
 .advantages_8 {
   background: url("../img/advantages_8.png") 100% 100% no-repeat;
-}
-.advantages_8 .advantages__text_name {
-  margin-top: 340px;
 }
 .advantages_9 {
   color: #fff;
   background: url("../img/advantages_9.png") 100% 100% no-repeat;
 }
-.advantages_9 .advantages__text_name {
-  margin-top: 340px;
-}
 .advantages_10 {
   color: #fff;
   background: url("../img/advantages_10.png") 100% 100% no-repeat;
-}
-.advantages_10 .advantages__text_name {
-  margin-top: 30px;
-}
-.advantages_10 .advantages__text_description {
-  margin-bottom: 35px;
 }
 .advantages__text_name {
   font-size: 14px;
@@ -175,16 +97,11 @@ body {
   font-size: 28px;
 }
 .button {
+  display: inline-block;
   border: 2px solid #000;
   border-radius: 30px;
-  display: table;
 }
 .button__text {
-  font-size: 14px;
+  font-size: 12pt;
   padding: 10px 30px;
-  display: table-cell;
-}
-.button__icon {
-  display: table-cell;
-  vertical-align: middle;
 }
