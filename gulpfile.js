@@ -22,7 +22,7 @@ gulp.task('serve', ['stylus', 'pug', 'coffee'], function() {
 
 //Сжатие и перемещение изображений
 gulp.task('compress-images', function () {
-    gulp.src('src/img/*')
+    gulp.src('src/assets/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('build/img'))
 });
@@ -34,8 +34,6 @@ gulp.task('stylus', function(){
   .pipe(gulp.dest('build/css/'))
   .pipe(browserSync.stream());
 });
-
-
 
 // Компиляция файлов PUG
 gulp.task('pug', function(){
