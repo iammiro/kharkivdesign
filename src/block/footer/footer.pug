@@ -1,2 +1,11 @@
-mixin b-footer
-	.footer
+mixin b-footer(contactsAddress, contactsPhone, contactsEmail1, contactsEmail2, socialsText, socialsCopyright, classesBlock)
+  +b.footerColl
+    +e.adress!=contactsAddress
+    +e.phone!=contactsPhone
+    +e.email!=contactsEmail1
+    +e.email!=contactsEmail2
+  +b.footerColl
+    +e.socialsText!=socialsText
+    +e.socialsIcons
+      img(src="img/socialsIcons.png" alt="socialsIcons")
+    +e.socialsCopyright!=socialsCopyright
