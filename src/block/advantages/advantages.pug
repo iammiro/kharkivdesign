@@ -1,15 +1,9 @@
-// 
-	1. "textName" - это текст который будет отображаться внутри блока
-	2. "textDescription" - это текст который будет отображаться внутри блока
-	3. "textBtn" - текст кнопки
-	4. "classesBlock" - название класса которое можно присвоить чтобы задать блоку свои стили или иконку
-	5. "classesBtn" - название класса которое можно присвоить чтобы задать кнопке свои стили или иконку
-
 mixin b-advantages(textName, textDescription, textBtn, classesBlock, classesBtn)
 	+b.advantages(class=classesBlock)
 		+e.icon
-		+e.text_name!= textName
+			.my-icon
+		if textName
+			+e.text_name!= textName
 		+e.text_description!= textDescription
-		// Кнопка - миксин находится тут "block\button\button"
 		if textBtn
 			+b-button(textBtn, classesBtn)

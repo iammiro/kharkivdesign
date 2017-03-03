@@ -14,9 +14,9 @@ gulp.task('serve', ['stylus', 'pug', 'coffee'], function() {
         }
     });
 
-    gulp.watch('src/styl/*.*', ['stylus']);
-    gulp.watch('src/**/*.*', ['pug']);
-    gulp.watch('src/coffee/*.*', ['coffee']);
+    gulp.watch('src/**/*.styl', ['stylus']);
+    gulp.watch('src/**/*.pug', ['pug']);
+    gulp.watch('src/**/*.coffee', ['coffee']);
     gulp.watch('build/*.*').on('change', browserSync.reload);
 });
 
@@ -29,7 +29,7 @@ gulp.task('compress-images', function () {
 
 // Компиляция файлов Stylus
 gulp.task('stylus', function(){
-  return gulp.src('src/assets/*.*')
+  return gulp.src('src/assets/kharkivdesign.styl')
   .pipe(stylus())
   .pipe(gulp.dest('build/css/'))
   .pipe(browserSync.stream());
@@ -45,7 +45,7 @@ gulp.task('pug', function(){
 
 // Компиляция файлов Coffee
 gulp.task('coffee', function(){
-  return gulp.src('src/coffee/*.*')
+  return gulp.src('src/**/*.coffee')
   .pipe(coffee())
   .pipe(gulp.dest('build/js/'))
   .pipe(browserSync.stream());
