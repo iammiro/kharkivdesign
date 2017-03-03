@@ -166,6 +166,14 @@ body {
 .advantages_10 .advantages__text_description {
   margin-bottom: 35px;
 }
+.advantages_10 .button {
+  border-color: #000;
+  color: #000;
+}
+.advantages_10 .button__icon .my-icon::before {
+  content: "@";
+  padding-left: 2px;
+}
 .advantages__text_name {
   font-size: 14px;
   color: #6a6b6f;
