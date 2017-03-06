@@ -17,7 +17,7 @@ body {
   font-family: OpenSans;
 }
 .wrap {
-  width: 1366px;
+  max-width: 1366px;
   margin: 0 auto;
 }
 .header {
@@ -34,9 +34,10 @@ body {
 }
 .advantages {
   font-family: OpenSansSemibold;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
-  height: 490px;
+  min-height: 490px;
   padding: 0 50px;
   background-size: cover;
 }
@@ -46,8 +47,15 @@ body {
 .advantages_col-2 {
   width: 66.666%;
 }
+@media (max-width: 767px) {
+  .advantages_col-1,
+  .advantages_col-2 {
+    width: 100%;
+  }
+}
 .advantages_1 {
-  background: url("../img/advantages_1.png") 100% 100% no-repeat;
+  background: url("../img/advantages_1.png") center no-repeat;
+  background-size: 100%;
 }
 .advantages_1 .advantages__text_name {
   margin-top: 35px;
@@ -82,7 +90,7 @@ body {
   margin: 0 auto;
 }
 .advantages_2:hover {
-  background: url("../img/advantages_2_hover.png") 100% 100% no-repeat;
+  background: url("../img/advantages_2_hover.png") center no-repeat;
   transition: 1s;
 }
 .advantages_3 {
@@ -108,7 +116,7 @@ body {
 }
 .advantages_5 {
   color: #fff;
-  background: url("../img/advantages_5.png") 100% 100% no-repeat;
+  background: url("../img/advantages_5.png") center no-repeat;
 }
 .advantages_5 .advantages__text_name {
   margin-top: 295px;
@@ -128,6 +136,12 @@ body {
   background: #fff;
   text-align: center;
 }
+.advantages_6 .advantages__text_name {
+  order: 10;
+}
+.advantages_6 .advantages__text_description {
+  margin-bottom: 50px;
+}
 .advantages_6 .advantages__icon {
   margin-top: 65px;
   margin-bottom: 40px;
@@ -138,27 +152,27 @@ body {
 }
 .advantages_7 {
   color: #fff;
-  background: url("../img/advantages_7.png") 100% 100% no-repeat;
+  background: url("../img/advantages_7.png") center no-repeat;
 }
 .advantages_7 .advantages__text_name {
   margin-top: 40px;
 }
 .advantages_8 {
-  background: url("../img/advantages_8.png") 100% 100% no-repeat;
+  background: url("../img/advantages_8.png") center no-repeat;
 }
 .advantages_8 .advantages__text_name {
   margin-top: 340px;
 }
 .advantages_9 {
   color: #fff;
-  background: url("../img/advantages_9.png") 100% 100% no-repeat;
+  background: url("../img/advantages_9.png") center no-repeat;
 }
 .advantages_9 .advantages__text_name {
   margin-top: 340px;
 }
 .advantages_10 {
   color: #fff;
-  background: url("../img/advantages_10.png") 100% 100% no-repeat;
+  background: url("../img/advantages_10.png") center no-repeat;
 }
 .advantages_10 .advantages__text_name {
   margin-top: 30px;
