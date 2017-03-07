@@ -1,2 +1,23 @@
 mixin b-header
-	.header
+	+b.header
+		+b.wrap
+			+b-logo
+			+b-search
+		+b.wrap
+			+b.primary-nav
+				+b-navigation([
+					{'title':'Об институте','link':'#0'},
+					{'title':'Абитуриентам','link':'#0'},
+					{'title':'Студентам','link':'#0'},
+					{'title':'Специальности','link':'#0'}
+				])
+			+b.secondary-nav
+				+b-navigation([
+					{'title':'Новости','link':'#0'},
+					{'title':'Вакансии','link':'#0'},
+					{'title':'Контакты','link':'#0'}
+				])
+		+b.wrap
+			+b.intro
+				+b.H1 Откройте для себя <br /> Институт моды и дизайна
+				+b-button('Online регистрация')
