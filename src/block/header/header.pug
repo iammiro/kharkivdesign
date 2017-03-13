@@ -1,26 +1,25 @@
+// Logo
 -textLogo = 'Международный институт <br /> моды и дизайна'
 -imgLogo = '../img/ic-logo.svg'
 -linkLogo = 'index.html'
+-classesLogo = "_header"
 
+// Nav first
+-itemsNavFirst = [{'name':'Об институте','link':'#0'}, {'name':'Абитуриентам','link':'#0'}, {'name':'Студентам','link':'#0'}, {'name':'Специальности','link':' #0'}]
+-classesNavFirst = '_first'
 
+// Nav second
+-itemsNavSecond = [{'name':'Новости','link':'#0'}, {'name':'Вакансии','link':'#0'}, {'name':'Контакты','link':'#0'}]
+-classesNavSecond = '_second'
 
+// Btn
+-textBtnHeader = 'Online регистрация'
 
 mixin b-header
 	+b.header
-		+b-logo(textLogo, imgLogo, linkLogo)
+		+b-logo(textLogo, imgLogo, linkLogo, classesLogo)
 		+b-search
-		+b.primary-nav
-			+b-navigation([
-				{'title':'Об институте','link':'#0'},
-				{'title':'Абитуриентам','link':'#0'},
-				{'title':'Студентам','link':'#0'},
-				{'title':'Специальности','link':'#0'}
-			])
-		+b.secondary-nav
-			+b-navigation([
-				{'title':'Новости','link':'#0'},
-				{'title':'Вакансии','link':'#0'},
-				{'title':'Контакты','link':'#0'}
-			])
+		+b-nav(itemsNavFirst, classesNavFirst)
+		+b-nav(itemsNavSecond, classesNavSecond)
 		+b.H1 Откройте для себя <br> Институт моды и дизайна
-		+b-button('Online регистрация')
+		+b-button(textBtnHeader)
