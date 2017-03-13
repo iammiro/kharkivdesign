@@ -1,9 +1,18 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();;
-var pug = require('gulp-pug');
-var stylus = require('gulp-stylus');
-var coffee = require('gulp-coffee');
-var imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const pug = require('gulp-pug');
+const stylus = require('gulp-stylus');
+const coffee = require('gulp-coffee');
+const imagemin = require('gulp-imagemin');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const nested = require('postcss-nested');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+const Filter = require('gulp-filter');
+const minify = require('gulp-minify');
+
 
 
 // Static server
@@ -22,15 +31,17 @@ gulp.task('serve', ['stylus', 'pug', 'coffee'], function() {
 
 //Сжатие и перемещение изображений
 gulp.task('compress-images', function () {
-    gulp.src('src/assets/img/*')
+    gulp.src('src/assets/i**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('build/img'))
 });
 
-// Компиляция файлов Stylus
+// Компиляция + автопрефиксер + минификация файлов Stylus
 gulp.task('stylus', function(){
   return gulp.src('src/assets/kharkivdesign.styl')
   .pipe(stylus())
+  .pipe(postcss([ autoprefixer() ]))
+  .pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest('build/css/'))
   .pipe(browserSync.stream());
 });
