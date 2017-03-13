@@ -24,7 +24,7 @@
     "gulp-minify": "0.0.15",
     "gulp-postcss": "^6.3.0",
     "postcss": "^5.2.14",
-    "postcss-nested": "^1.0.0"
+    "postcss-nested": "^1.0.0",
     "gulp-pug": "^3.2.0"
   },
   "dependencies": {
