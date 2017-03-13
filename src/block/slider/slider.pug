@@ -1,0 +1,4 @@
+mixin b-slider(items, classesSlider)
+	+b.UL(class=classesSlider)
+		each item, i in items
+			+e.department #{item.name}
