@@ -1,6 +1,13 @@
+-textLogo = 'Международный институт <br /> моды и дизайна'
+-imgLogo = '../img/ic-logo.svg'
+-linkLogo = 'index.html'
+
+
+
+
 mixin b-header
 	+b.header
-		+b-logo
+		+b-logo(textLogo, imgLogo, linkLogo)
 		+b-search
 		+b.primary-nav
 			+b-navigation([
