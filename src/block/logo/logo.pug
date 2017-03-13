@@ -1,5 +1,5 @@
-mixin b-logo
+mixin b-logo(textLogo, imgLogo, linkLogo)
 	+b.logo
-		+e.A(href="index.html")
-			+e.image(src="../img/ic-logo.svg" alt="Logo Image")
-			+e.text Международный институт <br /> моды и дизайна
+		+e.A(href=linkLogo)
+			+e.image(src=imgLogo alt="logo")
+			+e.text!=textLogo
