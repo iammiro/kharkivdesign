@@ -6,9 +6,7 @@ html
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, user-scalable=yes")
-		title ИНСТИТУТ МОДЫ И ДИЗАЙНА
-		link(rel="stylesheet" href="/vendor/reset.css")
-		link(rel="stylesheet" href="/css/kharkivdesign.css")
+		title Международный институт моды и дизайна
 	body
 		+b-header
 		.wrap
@@ -16,4 +14,8 @@ html
 				block main
 			footer.footer
 				+b-footer(contactsAddress, contactsPhone, contactsEmail1, contactsEmail2, socialsText, socialsCopyright, classesBlock)
+			link(rel="stylesheet" href="/css/kharkivdesign.css")
+			link(rel="stylesheet" href="/vendor/flickity/flickity.css")
 			script(type="text/javascript" src="/vendor/jquery.min.js")
+			script(type="text/javascript" src="/vendor/flickity/flickity.pkgd.min.js")
+			script(type="text/javascript" src="/js/index.js")

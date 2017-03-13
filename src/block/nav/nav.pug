@@ -1,0 +1,6 @@
+mixin b-nav(itemsNav, classesNav)
+	+b.nav(class=classesNav)
+		+e.UL.list
+			each item in itemsNav
+				+e.item
+					+e.link(href=item.link) #{item.name}

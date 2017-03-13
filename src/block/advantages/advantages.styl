@@ -1,57 +1,127 @@
+
+.page_advantages
+	display flex
+	display -webkit-flex
+	flex-wrap wrap
+	justify-content space-between
 .advantages
 	font-family OpenSansSemibold
-	display inline-block
+	display flex
+	flex-direction column
 	box-sizing border-box
-	height 490px
-	padding 35px 50px
+	min-height 485px
+	padding 0 50px
 	background-size cover
 
 	&_col-1
 		width 33.333%
-
 	&_col-2
 		width 66.666%
-
-	&__text_name
-		font-size 10px
-		color #6a6b6f
-		margin-bottom 20px
-
-	&__text_description
-		font-size 26px
+		
+	@media tablet
+		&_col-1
+			width 50%
+		&_col-2	
+			width 100%
+		
+	@media phone
+		&_col-1,
+		&_col-2	
+			width 100%
 
 	&_1
-		background url(../img/advantages_1.png) 100% 100% no-repeat
-
+		background url(../img/advantages_1.png) center no-repeat
+		.advantages__text_name
+			margin-top 35px
+		.advantages__text_description
+			margin-bottom 35px
+		button("@", #000)
+				
 	&_2
 		background #fff
-
+		text-align center
+		.advantages__icon 
+			margin-top 60px
+			margin-bottom 50px
+			.my-icon::before
+				color #fc4600
+				content "Calendar star"
+		.advantages__text_description
+			margin-bottom 70px
+		.button
+			margin 0 auto
+	&_2:hover
+		background url(../img/advantages_2_hover.png) center no-repeat
+		transition: 1s;
+		
 	&_3
 		color #fff
 		background #fd4600
-
+		.advantages__text_description
+			margin-top 75px
+			margin-bottom 70px
+			line-height 1.2
+		button("@", #fff)
+		
 	&_4
 		color #fff
 		background #fff
-
+		
 	&_5
 		color #fff
-		background url(../img/advantages_5.png) 100% 100% no-repeat
-
+		background url(../img/advantages_5.png) center no-repeat
+		.advantages__text_name
+			margin-top 295px
+		.advantages__text_description
+			margin-bottom 35px
+		button("@", #fff)
+		
 	&_6
 		background #fff
-
+		text-align center
+		.advantages__text_name
+			order 10
+		.advantages__text_description
+			margin-bottom 50px
+		.advantages__icon 
+			margin-top 65px
+			margin-bottom 40px
+			.my-icon::before
+				color #fc4600
+				content "Quotes"
+			
 	&_7
 		color #fff
-		background url(../img/advantages_7.png) 100% 100% no-repeat
+		background url(../img/advantages_7.png) center no-repeat
+		.advantages__text_name
+			margin-top 40px
 
 	&_8
-		background url(../img/advantages_8.png) 100% 100% no-repeat
-
+		background url(../img/advantages_8.png) center no-repeat
+		.advantages__text_name
+			margin-top 340px
 	&_9
 		color #fff
-		background url(../img/advantages_9.png) 100% 100% no-repeat
-
+		background url(../img/advantages_9.png) center no-repeat
+		.advantages__text_name
+			margin-top 340px
+			
 	&_10
 		color #fff
-		background url(../img/advantages_10.png) 100% 100% no-repeat
+		background url(../img/advantages_10.png) center no-repeat
+		.advantages__text_name
+			margin-top 30px
+		.advantages__text_description
+			margin-bottom 35px
+		button("@", #000)
+
+	&__text_name
+		font-size 14px
+		color #6a6b6f
+		margin-bottom 26px
+	&__text_description
+		font-size 28px
+		
+	@media (max-width 1024px)
+		&__text_description
+			font-size 22px
