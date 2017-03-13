@@ -1,18 +1,21 @@
--contactsAddress = 'Украина</br>г. Харьков, ул. Революции, 7'
 -contactsPhone = '057 716 49 60'
--contactsEmail1 = 'office@kharkivdesign.com'
--contactsEmail2 = 'education@kharkivdesign.com'
+-contactsAddress = 'Украина</br>г. Харьков, ул. Революции, 7'
+-contactsEmails = 'office@kharkivdesign.com <br>education@kharkivdesign.com'
 -socialsText = 'Следите за нами'
 -socialsCopyright = '© 1998–2016  Все права защищены.'
 -classesBlock = ''
-mixin b-footer(contactsAddress, contactsPhone, contactsEmail1, contactsEmail2, socialsText, socialsCopyright, classesBlock)
+mixin b-footer(contactsAddress, contactsPhone, contactsEmails, socialsText, socialsCopyright, classesBlock)
   +b.footerColl
-    +e.address!=contactsAddress
+    +b-logo
     +e.phone!=contactsPhone
-    +e.email!=contactsEmail1
-    +e.email!=contactsEmail2
+    +e.address!=contactsAddress
+    +e.email!=contactsEmails
   +b.footerColl
     +e.socialsText!=socialsText
     +e.socialsIcons
-      img(src="img/socialsIcons.png" alt="socialsIcons")
+      img(src="img/social-icons/003-facebook-logo.svg" alt="socialsIcons")
+      img(src="img/social-icons/001-twitter-social-logotype.svg" alt="socialsIcons")
+      img(src="img/social-icons/004-instagram-social-network-logo-of-photo-camera.svg" alt="socialsIcons")
+      img(src="img/social-icons/005-youtube-symbol.svg" alt="socialsIcons")
+      img(src="img/social-icons/002-behance-logo.svg" alt="socialsIcons")
     +e.socialsCopyright!=socialsCopyright
