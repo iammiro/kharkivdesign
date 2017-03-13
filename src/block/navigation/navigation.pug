@@ -1,7 +1,0 @@
-mixin b-navigation(nav_items)
-	+b.nav
-		+e.UL.list
-			each top_item in nav_items
-				+e.item
-					- var linkatts = {'href': top_item.link}
-					+e.link(href=url)&attributes(linkatts)= top_item.title
