@@ -7,13 +7,15 @@ html
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, user-scalable=yes")
 		title Международный институт моды и дизайна
-		//- link(rel="stylesheet" href="/vendor/reset.css")
 		link(rel="stylesheet" href="/css/kharkivdesign.css")
+		link(rel="stylesheet" href="/vendor/flickity/flickity.css")
 	body
 		+b-header
 		.wrap
 			main.main
 				block main
 			footer.footer
-				+b-footer(contactsAddress, contactsPhone, contactsEmails, socialsText, socialsCopyright, classesBlock)
+				+b-footer(contactsAddress, contactsPhone, contactsEmail1, contactsEmail2, socialsText, socialsCopyright, classesBlock)
 			script(type="text/javascript" src="/vendor/jquery.min.js")
+			script(type="text/javascript" src="/vendor/flickity/flickity.pkgd.min.js")
+			script(type="text/javascript" src="/js/index.js")
