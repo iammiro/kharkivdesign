@@ -1,5 +1,5 @@
-mixin b-logo(textLogo, imgLogo, linkLogo)
-	+b.logo
-		+e.A(href=linkLogo)
-			+e.image(src=imgLogo alt="logo")
+mixin b-logo(textLogo, imgLogo, linkLogo, classesLogo)
+	+b.logo(class=classesLogo)
+		+e.A.link(href=linkLogo)
+			+e.ima(src=imgLogo alt="logo")
 			+e.text!=textLogo
