@@ -6,7 +6,7 @@
 -classesBlock = ''
 mixin b-footer(contactsAddress, contactsPhone, contactsEmails, socialsText, socialsCopyright, classesBlock)
   +b.footerColl
-    +b-logo
+    +b-logo(textLogo, imgLogo, linkLogo, classesLogo)
     +e.phone!=contactsPhone
     +e.address!=contactsAddress
     +e.email!=contactsEmails
