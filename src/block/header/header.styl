@@ -6,23 +6,31 @@
 	overflow hidden
 	max-width 1366px
 	margin 0 auto
-	padding 40px 50px 70px
+	padding 45px 50px 75px
 	box-sizing border-box
-
-.logo
-	float left
-
-.primary-nav
-	float left
-
-.secondary-nav
-	float right
-
-.intro
-	position absolute
-	bottom 78px
-
-	h1
-		margin-bottom 38px
-
-	button('', primary-color)
+	display flex
+	flex-wrap wrap
+	button('', #fff)
+	
+	.row_1, .row_2
+		width 100%
+	.row_1
+		.row__item_2
+			margin-top 40px
+		.row__item_1,
+		.row__item_2
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+ 	.row_2
+			display table-cell
+			vertical-align bottom
+			align-self flex-end
+	.header__title
+		font-size 36px
+		font-weight 700
+		line-height 1.2
+		color #fff
+		text-transform uppercase
+		margin-bottom 40px
+		font-family MyriadProRegular

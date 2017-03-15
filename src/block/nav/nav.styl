@@ -1,11 +1,46 @@
-.nav
+.nav	
 	&__item
 		display inline-block
 		margin-right 46px
 		&:last-of-type
 			margin-right 0
-
 	&__link
-		font-size font-size-medium
 		transition color .2s ease
-		font-smoothing()
+	&_primary
+		margin-bottom 20px
+		font-size 18px
+		.nav__item
+			margin 0 23px
+			&:first-child
+				margin-left 0
+			&:last-child
+				margin-right 0
+	&_second
+		font-size 16px
+		margin-bottom 20px
+		.nav__item
+			margin 0 20px
+			&:first-child
+				margin-left 0
+			&:last-child
+				margin-right 0
+				
+.toggler_primary
+	display none
+
+@media tablet
+	.nav_primary
+		display none
+	.toggler_primary
+		width 40px
+		display inline-block
+		.toggler__line
+			width 100%
+			border-bottom 2px solid #fff
+			padding-top 8px
+@media phone
+	.nav_second
+		width 100%
+		text-align center
+		.nav__item
+			margin 0 10px
