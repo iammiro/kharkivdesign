@@ -10,13 +10,14 @@ const nested = require('postcss-nested');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
+const concatCss = require('gulp-concat-css');
 const Filter = require('gulp-filter');
 const minify = require('gulp-minify');
 
 
 
 // Static server
-gulp.task('serve', ['stylus', 'pug', 'coffee'], function() {
+gulp.task('serve', ['stylus', 'pug', 'min-js', 'min-css', 'min-scripts'], function() {
     browserSync.init({
         server: {
             baseDir: "./build/"
@@ -34,6 +35,31 @@ gulp.task('compress-images', function () {
     gulp.src('src/assets/i**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('build/img'))
+});
+
+//Сжатие js
+gulp.task('min-js', function() {
+    gulp.src('src/block/**/*.js')
+        .pipe(concat('main.js'))
+        .pipe(minify())
+        .pipe(gulp.dest('build/js/'))
+        .pipe(browserSync.stream());
+});
+
+//Конкатенация js библиотек
+gulp.task('min-scripts', function() {
+    return gulp.src('src/assets/vendor/**/*.js')
+        .pipe(concat('all.js'))
+        .pipe(minify())
+        .pipe(gulp.dest('build/js/'));
+});
+
+//Конкатенация CSS сторонних вендоров
+gulp.task('min-css', function () {
+    return gulp.src('src/assets/vendor/**/*.css')
+        .pipe(concatCss("bundle.css"))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('build/css/'));
 });
 
 // Компиляция + автопрефиксер + минификация файлов Stylus
