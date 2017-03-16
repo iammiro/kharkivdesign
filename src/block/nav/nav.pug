@@ -1,5 +1,5 @@
 mixin b-nav(itemsNav, classesNav)
-	+b.nav(class=classesNav)
+	+b.nav(class=classesNav data-toggle='nav'+classesNav)
 		+e.UL.list
 			each item in itemsNav
 				+e.item

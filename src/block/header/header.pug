@@ -1,12 +1,12 @@
 // Logo
--textLogo = 'Международный институт <br /> моды и дизайна'
+-textLogo = 'Международный институт <br> моды и дизайна'
 -imgLogo = '../img/ic-logo.svg'
 -linkLogo = 'index.html'
 -classesLogo = "_header"
 
 // Nav first
 -itemsNavFirst = [{'name':'Об институте','link':'#0'}, {'name':'Абитуриентам','link':'#0'}, {'name':'Студентам','link':'#0'}, {'name':'Специальности','link':' #0'}]
--classesNavFirst = '_first'
+-classesNavFirst = '_primary'
 
 // Nav second
 -itemsNavSecond = [{'name':'Новости','link':'#0'}, {'name':'Вакансии','link':'#0'}, {'name':'Контакты','link':'#0'}]
@@ -17,9 +17,18 @@
 
 mixin b-header
 	+b.header
-		+b-logo(textLogo, imgLogo, linkLogo, classesLogo)
-		+b-search
-		+b-nav(itemsNavFirst, classesNavFirst)
-		+b-nav(itemsNavSecond, classesNavSecond)
-		+b.H1 Откройте для себя <br> Институт моды и дизайна
-		+b-button(textBtnHeader)
+		+b.row_1
+			+e.item_1
+				+b-logo(textLogo, imgLogo, linkLogo, classesLogo)
+				+b-search
+			+e.item_2
+				+b-nav(itemsNavFirst, classesNavFirst)
+				+b-nav(itemsNavSecond, classesNavSecond)
+				+b.toggler(class=classesNavFirst)
+					+e.line
+					+e.line
+					+e.line
+		+b.row_2
+			+e.item_1
+				+b.H1.header__title Откройте для себя <br> Институт моды и дизайна
+				+b-button(textBtnHeader)
