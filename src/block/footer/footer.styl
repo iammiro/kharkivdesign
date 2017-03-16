@@ -1,6 +1,6 @@
 .footer
   padding 70px 30px
-  width 1366px
+  max-width 1366px
   height 373px
   color #a1a0a0
   display flex
@@ -36,10 +36,12 @@
   width 35px
   margin 20px 10px
   color #ababab
+  transform: translateY(5px);
+  transition .4s
 
 .footerColl__socialsIcons img:hover
-  transform: translateY(-3px);
-  transition 1s
+  transform: translateY(-5px);
+  transition .4s
 
 .footerColl__socialsCopyright
   margin-top 20px
@@ -47,7 +49,6 @@
 @media (max-width: 1010px)
   .footer
     padding 70px 50px
-    width 1366px
     height 373px
     color #a1a0a0
     display flex
