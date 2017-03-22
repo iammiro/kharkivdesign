@@ -75,7 +75,7 @@ gulp.task('stylus', function(){
 // Компиляция файлов PUG
 gulp.task('pug', function(){
   return gulp.src('src/index.pug')
-  .pipe(pug())
+  .pipe(pug({pretty: true}))
   .pipe(gulp.dest('build/'))
   .pipe(browserSync.stream());
 });
