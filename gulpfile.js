@@ -13,7 +13,7 @@ const cleanCSS = require('gulp-clean-css');
 const concatCss = require('gulp-concat-css');
 const Filter = require('gulp-filter');
 const minify = require('gulp-minify');
-
+const yamlData = require('gulp-yaml-data');
 
 
 // Static server
@@ -75,6 +75,11 @@ gulp.task('stylus', function(){
 // Компиляция файлов PUG
 gulp.task('pug', function(){
   return gulp.src('src/*.pug')
+  .pipe(yamlData({
+      property: 'data',
+      src: 'src/data/data.yml',
+      override: false 
+  }))
   .pipe(pug({pretty: true}))
   .pipe(gulp.dest('build/'))
   .pipe(browserSync.stream());

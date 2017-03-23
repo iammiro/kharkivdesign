@@ -2,59 +2,23 @@ extends layouts/root
 
 block main
 	.page.page_advantages
-		-textName1 = 'Новости'
-		-textDescription1 = 'Новая специальность — дизайнер <br> мебели'
-		-textBtn1 = 'Читать'
-		-classesBlock1 = '_col-2 _1'
-		+b-advantages(textName1, textDescription1, textBtn1, classesBlock1, classesBtn1)
 
+		+b-advantages(adv[0].textName, adv[0].textDescription, adv[0].textBtn, adv[0].classesBlock, adv[0].classesBtn)
+		
+		+b-advantages(adv[1].textName, adv[1].textDescription, adv[1].textBtn, adv[1].classesBlock, adv[1].classesBtn, adv[1].classesBtnIcon)
 
-		-textDescription2 = '21 октября <br> День открытых <br> дверей'
-		-textBtn2 = 'Записаться'
-		-classesBlock2 = '_col-1 _2'
-		+b-advantages(textName2, textDescription2, textBtn2, classesBlock2, classesBtn2, classesBtnIcon2)
+		+b-advantages(adv[2].textName, adv[2].textDescription, adv[2].textBtn, adv[2].classesBlock, adv[2].classesBtn, adv[2].classesBtnIcon)
 
+		+b-slider(adv[3].items, adv[3].classesSlider)
 
-		-textDescription3 = 'Наш институт готовит <br> специалистов по самым <br> востребованным <br> специальностям, что позволит вам найти <br> интересную работу'
-		-textBtn3 = 'Специальности'
-		-classesBlock3 = '_col-1 _3'
-		-classesBtnIcon3 = '_up-arrow-white'
-		+b-advantages(textName3, textDescription3, textBtn3, classesBlock3, classesBtn3, classesBtnIcon3)
+		+b-advantages(adv[4].textName, adv[4].textDescription, adv[4].textBtn, adv[4].classesBlock, adv[4].classesBtn, adv[4].classesBtnIcon)
 
-		-items = [{name : 'Работы студентов', link : 'img/slider/slide-1.png'}]
-		-classesSlider = 'slider advantages_col-2 '
-		+b-slider(items, classesSlider)
+		+b-advantages(adv[5].textName, adv[5].textDescription, adv[5].textBtn, adv[5].classesBlock, adv[5].classesBtn, adv[5].classesBtnIcon)
 
-		-textName5 = 'Новости'
-		-textDescription5 = 'Нора Иньеста в Киеве'
-		-textBtn5 = 'Читать'
-		-classesBlock5 = '_col-1 _5'
-		-classesBtnIcon5 = '_up-arrow-white'
-		+b-advantages(textName5, textDescription5, textBtn5, classesBlock5, classesBtn5, classesBtnIcon5)
+		+b-advantages(adv[6].textName, adv[6].textDescription, adv[6].textBtn, adv[6].classesBlock, adv[6].classesBtn, adv[6].classesBtnIcon)
 
-		-textName6 = 'Астреинова Наталья Григорьевна <br> Директор Института'
-		-textDescription6 = 'В отличие от других учебных заведений, основной упор у нас делается на специальные предметы и практику, практику, практику...'
-		-classesBlock6 = '_col-1 _6'
-		+b-advantages(textName6, textDescription6, textBtn6, classesBlock6, classesBtn6, classesBtnIcon6)
+		+b-advantages(adv[7].textName, adv[7].textDescription, adv[7].textBtn, adv[7].classesBlock, adv[7].classesBtn, adv[7].classesBtnIcon)
 
-		-textName7 = 'Стажировка'
-		-textDescription7 = 'Стажировка в Милане и Риме'
-		-classesBlock7 = '_col-1 _7'
-		+b-advantages(textName7, textDescription7, textBtn7, classesBlock7, classesBtn7, classesBtnIcon7)
+		+b-advantages(adv[8].textName, adv[8].textDescription, adv[8].textBtn, adv[8].classesBlock, adv[8].classesBtn, adv[8].classesBtnIcon)
 
-		-textName8 = 'Об институте'
-		-textDescription8 = 'Награды'
-		-classesBlock8 = '_col-1 _8'
-		+b-advantages(textName8, textDescription8, textBtn8, classesBlock8, classesBtn8, classesBtnIcon8)
-
-		-textName9 = 'Об институте'
-		-textDescription9 = 'Лучшие студенты'
-		-classesBlock9 = '_col-1 _9'
-		+b-advantages(textName9, textDescription9, textBtn9, classesBlock9, classesBtn9, classesBtnIcon9)
-
-		-textName10 = 'Об институте'
-		-textDescription10 = 'Наши учителя'
-		-textBtn10 = 'Все учителя'
-		-classesBlock10 = '_col-1 _10'
-		-classesBtnIcon10 = '_up-arrow-black'
-		+b-advantages(textName10, textDescription10, textBtn10, classesBlock10, classesBtn10, classesBtnIcon10)
+		+b-advantages(adv[9].textName, adv[9].textDescription, adv[9].textBtn, adv[9].classesBlock, adv[9].classesBtn, adv[9].classesBtnIcon)
