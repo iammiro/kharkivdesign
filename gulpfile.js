@@ -12,12 +12,10 @@ const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const concatCss = require('gulp-concat-css');
 const Filter = require('gulp-filter');
-const minify = require('gulp-minify');
-
-
+const babel = require('gulp-babel');
 
 // Static server
-gulp.task('serve', ['stylus', 'pug', 'min-js', 'min-css', 'min-scripts'], function() {
+gulp.task('serve', ['stylus', 'pug', 'min-js', 'min-css', 'min-scripts'], function () {
     browserSync.init({
         server: {
             baseDir: "./build/"
@@ -38,19 +36,22 @@ gulp.task('compress-images', function () {
 });
 
 //Сжатие js
-gulp.task('min-js', function() {
+gulp.task('min-js', function () {
     gulp.src('src/block/**/*.js')
         .pipe(concat('main.js'))
-        .pipe(minify())
+        // .pipe(minify())
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(gulp.dest('build/js/'))
         .pipe(browserSync.stream());
 });
 
 //Конкатенация js библиотек
-gulp.task('min-scripts', function() {
+gulp.task('min-scripts', function () {
     return gulp.src('src/assets/vendor/**/*.js')
         .pipe(concat('all.js'))
-        .pipe(minify())
+        // .pipe(minify())
         .pipe(gulp.dest('build/js/'));
 });
 
@@ -63,29 +64,29 @@ gulp.task('min-css', function () {
 });
 
 // Компиляция + автопрефиксер + минификация файлов Stylus
-gulp.task('stylus', function(){
-  return gulp.src('src/assets/kharkivdesign.styl')
-  .pipe(stylus())
-  .pipe(postcss([ autoprefixer() ]))
-  .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest('build/css/'))
-  .pipe(browserSync.stream());
+gulp.task('stylus', function () {
+    return gulp.src('src/assets/kharkivdesign.styl')
+        .pipe(stylus())
+        .pipe(postcss([autoprefixer()]))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('build/css/'))
+        .pipe(browserSync.stream());
 });
 
 // Компиляция файлов PUG
-gulp.task('pug', function(){
-  return gulp.src('src/index.pug')
-  .pipe(pug())
-  .pipe(gulp.dest('build/'))
-  .pipe(browserSync.stream());
+gulp.task('pug', function () {
+    return gulp.src('src/index.pug')
+        .pipe(pug())
+        .pipe(gulp.dest('build/'))
+        .pipe(browserSync.stream());
 });
 
 // Компиляция файлов Coffee
-gulp.task('coffee', function(){
-  return gulp.src('src/**/*.coffee')
-  .pipe(coffee())
-  .pipe(gulp.dest('build/js/'))
-  .pipe(browserSync.stream());
+gulp.task('coffee', function () {
+    return gulp.src('src/**/*.coffee')
+        .pipe(coffee())
+        .pipe(gulp.dest('build/js/'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('default', ['serve']);

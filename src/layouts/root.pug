@@ -21,7 +21,11 @@ html
 						font-size 36px
 						font-weight 700
 						text-transform uppercase
+
 	body
+		.preloader(style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: white; z-index: 66666666;")
+			.preloader__text(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background-color: blue; width: 20px; height: 20px; transition: .2s width, .2s height; display: flex; align-items: center; justify-content: center;")
+				.preloader__value 0%
 		+b-header
 		.wrap
 			main.main
@@ -32,3 +36,5 @@ html
 			link(rel="stylesheet" href="/css/kharkivdesign.css")
 			script(type="text/javascript" src="/js/jquery-3.1.1.min.js")
 			script(type="text/javascript" src="/js/flickity.pkgd.min.js")
+			script(src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.js")
+			script(type="text/javascript" src="/js/main.js")
