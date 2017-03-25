@@ -10,7 +10,7 @@ $(window).resize ->
     $('.nav_primary').removeClass 'active'
     $('[data-toggle]').css display: 'none'
   return
-$('.nav_primary').on 'click', ->
+$('.toggler').on 'click', ->
   active = $(this).hasClass('active')
   cl = $(this).attr('cl')
   if active

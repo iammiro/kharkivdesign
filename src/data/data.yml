@@ -1,0 +1,69 @@
+itemsNavFirst: 
+  - name : 'Об институте'
+    link : 'about.html'
+
+  - name : 'Абитуриентам'
+    link : 'applicants.html'
+
+  - name : 'Студентам'
+    link : 'students.html'
+
+  - name : 'Специальности'
+    link : 'specialties.html'
+
+itemsNavSecond : 
+  - name : 'Новости'
+    link : '#0'
+
+  - name : 'Вакансии'
+    link : '#0'
+  
+  - name : 'Контакты'
+    link : '#0'
+adv :
+  - textName : 'Новости'
+    textDescription : 'Новая специальность — дизайнер <br> мебели'
+    textBtn : 'Читать'
+    classesBlock : '_col-2 _1'
+
+  - textDescription : '21 октября <br> День открытых <br> дверей'
+    textBtn : 'Записаться'
+    classesBlock : '_col-1 _2'
+
+  - textDescription : 'Наш институт готовит <br> специалистов по самым <br> востребованным <br> специальностям, что позволит вам найти <br> интересную работу'
+    textBtn : 'Специальности'
+    classesBlock : '_col-1 _3'
+    classesBtnIcon : '_up-arrow-white'
+
+  - items : 
+    - name : 'Работы студентов'
+      link : 'img/slider/slide-1.png'
+    classesSlider : 'slider advantages_col-2'
+
+  - textName : 'Новости'
+    textDescription : 'Нора Иньеста в Киеве'
+    textBtn : 'Читать'
+    classesBlock : '_col-1 _5'
+    classesBtnIcon : '_up-arrow-white'
+
+  - textName : 'Астреинова Наталья Григорьевна <br> Директор Института'
+    textDescription : 'В отличие от других учебных заведений, основной упор у нас делается на специальные предметы и практику, практику, практику...'
+    classesBlock : '_col-1 _6'
+
+  - textName : 'Стажировка'
+    textDescription : 'Стажировка в Милане и Риме'
+    classesBlock : '_col-1 _7'
+
+  - textName : 'Об институте'
+    textDescription : 'Награды'
+    classesBlock : '_col-1 _8'
+
+  - textName : 'Об институте'
+    textDescription : 'Лучшие студенты'
+    classesBlock : '_col-1 _9'
+
+  - textName : 'Об институте'
+    textDescription : 'Наши учителя'
+    textBtn : 'Все учителя'
+    classesBlock : '_col-1 _10'
+    classesBtnIcon : '_up-arrow-black'
