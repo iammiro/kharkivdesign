@@ -5,6 +5,7 @@ Clone this repo and then in command line type:
 * `npm install` - install all dependencies
 * `npm start` - run dev-server and let magic happen, or
 * `npm run build` - build project from sources
+* `gulp` - build project from sources and start server
 
 --
 
@@ -23,12 +24,12 @@ Task name          | Description
 ### Other tasks
 Task name          | Description                                                      
 :------------------|:----------------------------------
-`sass` 	         | compile .sass/.scss to .css. We also use [postcss](https://github.com/postcss/postcss) for [autoprefixer](https://github.com/postcss/autoprefixer), so feel free to include other awesome postcss [plugins](https://github.com/postcss/postcss#plugins) when needed
+`stylus` 	         | compile .sass/.scss to .css. We also use [postcss](https://github.com/postcss/postcss) for [autoprefixer](https://github.com/postcss/autoprefixer), so feel free to include other awesome postcss [plugins](https://github.com/postcss/postcss#plugins) when needed
 `webpack`          | compile .js sources into bundle file
 `copy`             | copy common files from `./src` path to `./dist` path
 `swig`             | compile [swig](http://paularmstrong.github.io/swig/)  templates
 `nunjucks`         | compile Mozilla's awesome [nunjucks](https://mozilla.github.io/nunjucks/) templates
-`jade`             | compile [jade](http://jade-lang.com/) templates
+`pug`             | compile [jade](http://jade-lang.com/) templates
 `svgo`             | optimize svg files with [svgo](https://github.com/svg/svgo)
 `iconfont`         | compile iconfonts from svg sources
 `sprite:svg`       | create svg symbol sprites ([css-tricks](https://css-tricks.com/svg-sprites-use-better-icon-fonts/))
