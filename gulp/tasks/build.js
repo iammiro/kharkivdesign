@@ -1,6 +1,6 @@
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
-var config = require('../config');
+const gulp = require('gulp');
+const runSequence = require('run-sequence');
+const config = require('../config');
 
 function build(cb) {
     runSequence(

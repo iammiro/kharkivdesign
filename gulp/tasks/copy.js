@@ -1,5 +1,5 @@
-var gulp   = require('gulp');
-var config = require('../config.js');
+const gulp   = require('gulp');
+const config = require('../config.js');
 
 // gulp.task('copy:fonts', function() {
 //     return gulp

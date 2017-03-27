@@ -1,16 +1,16 @@
-var gulp        = require('gulp');
-var consolidate = require('gulp-consolidate');
-var fs          = require('fs');
-var path        = require('path');
-var config      = require('../../config');
-var allowExt    = ['.html', '.jade'];
+const gulp        = require('gulp');
+const consolidate = require('gulp-consolidate');
+const fs          = require('fs');
+const path        = require('path');
+const config      = require('../../config');
+const allowExt    = ['.html', '.jade'];
 
 gulp.task('index-page', function() {
-    var fullList = fs.readdirSync(config.src.templates);
-    var pages = fullList.reduce(function(acc, val) {
-        var parsed = path.parse(val);
-        var name = parsed.name;
-        var ext = parsed.ext;
+    const fullList = fs.readdirSync(config.src.templates);
+    const pages = fullList.reduce(function(acc, val) {
+        const parsed = path.parse(val);
+        const name = parsed.name;
+        const ext = parsed.ext;
         if (~allowExt.indexOf(ext)) {
             return acc.concat(name + '.html');
         }

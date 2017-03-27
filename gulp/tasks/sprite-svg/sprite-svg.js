@@ -1,12 +1,12 @@
-var gulp        = require('gulp');
-var plumber     = require('gulp-plumber');
-var svgmin      = require('gulp-svgmin');
-var svgStore    = require('gulp-svgstore');
-var rename      = require('gulp-rename');
-var cheerio     = require('gulp-cheerio');
-var through2    = require('through2');
-var consolidate = require('gulp-consolidate');
-var config      = require('../../config');
+const gulp        = require('gulp');
+const plumber     = require('gulp-plumber');
+const svgmin      = require('gulp-svgmin');
+const svgStore    = require('gulp-svgstore');
+const rename      = require('gulp-rename');
+const cheerio     = require('gulp-cheerio');
+const through2    = require('through2');
+const consolidate = require('gulp-consolidate');
+const config      = require('../../config');
 
 gulp.task('sprite:svg', function() {
     return gulp
@@ -29,14 +29,14 @@ gulp.task('sprite:svg', function() {
         .pipe(rename({ prefix: 'icon-' }))
         .pipe(svgStore({ inlineSvg: false }))
         .pipe(through2.obj(function(file, encoding, cb) {
-            var $ = file.cheerio;
-            var data = $('svg > symbol').map(function() {
-                var $this  = $(this);
-                var size   = $this.attr('viewBox').split(' ').splice(2);
-                var name   = $this.attr('id');
-                var ratio  = size[0] / size[1]; // symbol width / symbol height
-                var fill   = $this.find('[fill]:not([fill="currentColor"])').attr('fill');
-                var stroke = $this.find('[stroke]').attr('stroke');
+            const $ = file.cheerio;
+            const data = $('svg > symbol').map(function() {
+                const $this  = $(this);
+                const size   = $this.attr('viewBox').split(' ').splice(2);
+                const name   = $this.attr('id');
+                const ratio  = size[0] / size[1]; // symbol width / symbol height
+                const fill   = $this.find('[fill]:not([fill="currentColor"])').attr('fill');
+                const stroke = $this.find('[stroke]').attr('stroke');
                 return {
                     name: name,
                     ratio: +ratio.toFixed(2),

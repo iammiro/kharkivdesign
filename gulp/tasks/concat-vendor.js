@@ -7,7 +7,7 @@ const Filter = require('gulp-filter');
 const minify = require('gulp-minify');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-var pump = require('pump');
+const pump = require('pump');
 
 gulp.task('min-js', function (cb) {
     pump([
