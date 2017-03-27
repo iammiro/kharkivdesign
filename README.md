@@ -29,7 +29,7 @@ Task name          | Description
 `copy`             | copy common files from `./src` path to `./dist` path
 `swig`             | compile [swig](http://paularmstrong.github.io/swig/)  templates
 `nunjucks`         | compile Mozilla's awesome [nunjucks](https://mozilla.github.io/nunjucks/) templates
-`pug`             | compile [jade](http://jade-lang.com/) templates
+`pug`              | compile [pug](https://pugjs.org/) templates
 `svgo`             | optimize svg files with [svgo](https://github.com/svg/svgo)
 `iconfont`         | compile iconfonts from svg sources
 `sprite:svg`       | create svg symbol sprites ([css-tricks](https://css-tricks.com/svg-sprites-use-better-icon-fonts/))
