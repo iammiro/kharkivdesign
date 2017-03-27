@@ -55,8 +55,8 @@ $(() => {
 });
 
 
-// $(() => {
-//     $('img[data-original]').lazyload({
-//         effect : "fadeIn"
-//     })
-// });
+$(() => {
+    $('img[data-original]').lazyload({
+        effect : "fadeIn"
+    })
+});
