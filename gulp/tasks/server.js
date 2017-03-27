@@ -40,6 +40,7 @@ gulp.task('server', ['stylus', 'pug', 'min-js', 'min-css', 'min-scripts', 'compr
         }
     });
 
+    gulp.watch('src/**/*.js', ['min-js']);
     gulp.watch('src/**/*.styl', ['stylus']);
     gulp.watch('src/**/*.pug', ['pug']);
     gulp.watch('src/**/*.coffee', ['coffee']);

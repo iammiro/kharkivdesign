@@ -25,7 +25,11 @@ gulp.task('min-js', function (cb) {
 
 gulp.task('min-scripts', function (cb) {
     pump([
-            gulp.src('src/assets/vendor/**/*.js')
+            gulp.src(['src/assets/vendor/jquery/jquery-3.1.1.min.js',
+                'src/assets/vendor/barba/barba.min.js',
+                'src/assets/vendor/flickity/flickity.pkgd.min.js',
+                'src/assets/vendor/lazyload/jquery.lazyload.min.js',
+                'src/assets/vendor/imagesloaded4.1.1/imagesloaded.min.js'])
                 .pipe(concat('bundle.js')),
             uglify(),
             gulp.dest('build/js/')

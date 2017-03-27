@@ -22,11 +22,15 @@ html
 						font-weight 700
 						text-transform uppercase
 	body
+		.preloader(style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: white; z-index: 66666666;")
+			.preloader__text(style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background-color: blue; width: 100px; height: 100px; transition: .2s width, .2s height; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 26px;")
+				.preloader__value 0%
 		+b-header
 		.wrap
 			main.main
 				block main
 			footer.footer
+
 				+b-footer(contactsAddress, contactsPhone, contactsEmails, socialsText, socialsCopyright, classesBlock)
 			link(rel="stylesheet" href="css/bundle.css")
 			link(rel="stylesheet" href="css/kharkivdesign.css")

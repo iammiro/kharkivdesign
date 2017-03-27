@@ -20,24 +20,26 @@ $(() => {
 
     if (percentLoad) {
 
-        $('.main').imagesLoaded()
-            .always( (instance) => {
+        $('body').imagesLoaded()
+            .always((instance) => {
                 removeElement($preloader);
                 console.log('always', instance);
-            } )
-            .done( (instance) => {
+            })
+            .done((instance) => {
                 console.log('done', instance);
-            } )
-            .fail( (instance) => {
+
+            })
+            .fail((instance) => {
                 console.log('fail', instance);
-            } )
-            .progress( (instance, image) => {
+            })
+            .progress((instance, image) => {
+
                 const percentage = Math.round(100 / instance.images.length * instance.progressedCount);
                 $preloaderValue.text(percentage + '%');
                 const size = 30 + percentage;
                 $preloaderText.css('width', size + 'px').css('height', size + 'px');
                 console.log('progress', percentage);
-            } );
+            });
     } else {
         if (loaded) {
             removeElement($preloader)
@@ -53,10 +55,3 @@ $(() => {
     }
 
 });
-
-
-// $(() => {
-//     $('img[data-original]').lazyload({
-//         effect : "fadeIn"
-//     })
-// });
